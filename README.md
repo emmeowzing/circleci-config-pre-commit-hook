@@ -12,7 +12,7 @@ You must have the [`circleci`](https://circleci.com/docs/2.0/local-cli/) CLI ins
 repos:
 ...
 - repo: https://github.com/bjd2385/circleci-config-pre-commit-hook
-    rev: v1.0.0
+    rev: v1.0.3
     hooks:
       - id: circleci-config-validate
 ```
