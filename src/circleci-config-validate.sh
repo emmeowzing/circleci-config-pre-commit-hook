@@ -17,6 +17,8 @@ if ! command -v yq &>/dev/null; then
     exit 1
 fi
 
+echo "$@"
+
 # Validate the standard CircleCI config.
 if ! eMSG=$(circleci config validate "$@" -c .circleci/config.yml); then
     echo "CircleCI Configuration Failed Validation."
