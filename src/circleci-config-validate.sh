@@ -17,10 +17,8 @@ if ! command -v yq &>/dev/null; then
     exit 1
 fi
 
-echo "$@"
-
 # Validate the standard CircleCI config.
-if ! eMSG=$(circleci config validate "$@" -c .circleci/config.yml); then
+if ! eMSG=$(circleci config validate -c .circleci/config.yml); then
     echo "CircleCI Configuration Failed Validation."
     echo "${eMSG}"
     exit 1
@@ -36,7 +34,7 @@ if [ "${#mods[@]}" -ne 0 ]; then
     yq 'del(.setup)' "$continueConfig"
     yq -i '.workflows.version = 2' "$continueConfig"
 
-    if ! reMSG=$(circleci config validate "$@" -c "$continueConfig"); then
+    if ! reMSG=$(circleci config validate -c "$continueConfig"); then
         echo "CircleCI dynamic-continuation configuration failed validation."
         echo "${reMSG}"
         exit 1
