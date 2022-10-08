@@ -1,0 +1,55 @@
+version: 2.1
+
+setup: true
+
+
+executors:
+  default:
+    docker:
+      - image: cimg/base:stable
+
+  bash-5-2:
+    docker:
+      - image: bash:5.2
+
+  bash-5-1:
+    docker:
+      - image: bash:5.1
+
+  bash-5-0:
+    docker:
+      - image: bash:5.0
+
+  bash-4-4:
+    docker:
+      - image: bash:4.4
+
+  bash-4-3:
+    docker:
+      - image: bash:4.3
+
+  bash-4-2:
+    docker:
+      - image: bash:4.2
+
+  bash-4-1:
+    docker:
+      - image: bash:4.1
+
+  bash-4-0:
+    docker:
+      - image: bash:4.0
+
+
+orbs: {}
+
+
+commands: {}
+
+
+jobs:
+  tests:
+    
+
+
+workflows: {}
