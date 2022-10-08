@@ -6,3 +6,11 @@
   files: ^.circleci/.*yml$
   always_run: true
   args: []
+- id: circleci-orb-warnings
+  name: Warn about outdated CircleCI orbs
+  entry: src/circleci-orb-warnings.sh
+  language: script
+  verbose: false
+  files: ^.circleci/.*yml$
+  always_run: true
+  args: []
