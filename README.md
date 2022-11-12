@@ -13,4 +13,4 @@ repos:
 
 ## Prerequisites
 
-You must have the [`circleci`](https://circleci.com/docs/2.0/local-cli/) CLI installed, as well as [`yq`](https://github.com/mikefarah/yq#install), which is used to reduce the config files.
+You must have the [`circleci`](https://circleci.com/docs/2.0/local-cli/) CLI installed.
