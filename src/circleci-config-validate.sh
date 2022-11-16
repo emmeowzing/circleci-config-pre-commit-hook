@@ -12,6 +12,11 @@ if ! command -v circleci &>/dev/null; then
     exit 1
 fi
 
+if ! command -v mapfile &>/dev/null; then
+    echo "Bash builtin 'mapfile' isn't available, try upgrading Bash."
+    exit 1
+fi
+
 # Process all config files for independent validity.
 mapfile -t mods < <(find .circleci -type f \( -iname "*.yml" \))
 
