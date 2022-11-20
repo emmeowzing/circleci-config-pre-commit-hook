@@ -18,10 +18,10 @@ if ! command -v mapfile &>/dev/null; then
 fi
 
 # Process all config files for independent validity.
-mapfile -t mods < <(find .circleci -type f \( -iname "*.yml" \))
+mapfile -t mods < <(find .circleci/ -type f \( -iname "*.yml" \))
 
 for config in "${mods[@]}"; do
-    if ! reMSG=$(circleci config validate -c "$config"); then
+    if ! reMSG=$(circleci config validate --skip-update-check -c "$config"); then
         printf "CircleCI config file \"%s\" failed validation.\\n" "$config"
         echo "${reMSG}"
         exit 1
