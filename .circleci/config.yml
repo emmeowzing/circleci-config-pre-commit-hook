@@ -1,0 +1,38 @@
+version: 2.1
+
+setup: true
+
+
+executors: {}
+
+
+orbs:
+  dynamic: bjd2385/dynamic-continuation@3.4.0
+  general: bjd2385/general@0.2.0
+
+
+commands: {}
+
+
+jobs: {}
+
+
+workflows:
+  circleci-config-pre-commit-hook:
+    jobs:
+      - dynamic/continue:
+          context: orb-publishing
+          modules: |
+            src
+          filters:
+            branches:
+              ignore:
+                - master
+
+      - general/github-release:
+          context: github
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v?[0-9]+\.[0-9]+\.[0-9]+$/
