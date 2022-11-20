@@ -6,7 +6,7 @@ This CircleCI config validation [pre-commit](https://github.com/pre-commit/pre-c
 repos:
 ...
 - repo: https://github.com/bjd2385/circleci-config-pre-commit-hook
-    rev: v1.0.4
+    rev: v<latest version>
     hooks:
       - id: circleci-config-validate
 ```
