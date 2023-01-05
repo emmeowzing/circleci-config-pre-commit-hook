@@ -4,5 +4,5 @@
   language: script
   verbose: false
   files: ^.circleci/.*yml$
-  always_run: true
+  always_run: false
   args: []
