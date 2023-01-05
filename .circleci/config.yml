@@ -3,18 +3,9 @@ version: 2.1
 setup: true
 
 
-executors: {}
-
-
 orbs:
   dynamic: bjd2385/dynamic-continuation@3.4.0
   general: bjd2385/general@0.2.0
-
-
-commands: {}
-
-
-jobs: {}
 
 
 workflows:
