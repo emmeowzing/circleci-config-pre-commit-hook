@@ -1,3 +1,5 @@
+> **Important:** this project has been merged with [dynamic-continuation-orb](https://github.com/bjd2385/dynamic-continuation-orb), for which it was intended to be used.
+
 # CircleCI config validation pre-commit hook
 
 This CircleCI config validation [pre-commit](https://github.com/pre-commit/pre-commit) hook is intended to be used in conjunction with the [`dynamic-continuation`](https://github.com/bjd2385/dynamic-continuation-orb) orb (although this is not required). It extends the usual `circleci config validate` step by further validating every config you define under `.circleci/`, which dynamic-continuation would normally merge and submit from a setup workflow.
